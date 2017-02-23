@@ -19,6 +19,7 @@ type Client struct {
 	Categories CategoryService
 	Rates      RateService
 	Taxes      TaxService
+	Orders     OrderService
 }
 
 func NewClient(token string) *Client {

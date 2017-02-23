@@ -37,10 +37,10 @@ type orderParams struct {
 }
 
 type OrderService struct {
-	Repository TaxRepository
+	Repository OrderRepository
 }
 
-func (s *OrderService) Create(details orderDetails, from, to Address) (Tax, error) {
+func (s *OrderService) Create(details OrderDetails, from, to Address) (Order, error) {
 	return s.Repository.get(orderParams{
 		ID:          details.ID,
 		Date:        details.Date,
