@@ -99,6 +99,7 @@ func (c *Client) Setup() {
 	c.Categories = CategoryService{Repository: CategoryApi{client: c}}
 	c.Rates = RateService{Repository: RateApi{client: c}}
 	c.Taxes = TaxService{Repository: TaxApi{client: c}}
+	c.Orders = OrderService{Repository: OrderApi{client: c}}
 }
 
 func addQueryParams(req *http.Request, params interface{}) {
