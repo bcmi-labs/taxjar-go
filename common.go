@@ -9,11 +9,14 @@ type Address struct {
 }
 
 type LineItem struct {
-	Id             string  `json:"id,omitempty" bson:"id,omitempty"`
-	Quantity       int64   `json:"quantity,omitempty" bson:"quantity,omitempty"`
-	ProductTaxCode string  `json:"product_tax_code,omitempty" bson:"product_tax_code,omitempty"`
-	UnitPrice      float64 `json:"unit_price,omitempty" bson:"unit_price,omitempty"`
-	Discount       float64 `json:"discount,omitempty" bson:"discount,omitempty"`
+	ID                string  `json:"id,omitempty" bson:"id,omitempty"`
+	Quantity          int64   `json:"quantity,omitempty" bson:"quantity,omitempty"`
+	ProductTaxCode    string  `json:"product_tax_code,omitempty" bson:"product_tax_code,omitempty"`
+	ProductIdentifier string  `json:"product_identifier,omitempty" bson:"product_identifier,omitempty"`
+	Description       string  `json:"description,omitempty" bson:"description,omitempty"`
+	UnitPrice         float64 `json:"unit_price,omitempty" bson:"unit_price,omitempty"`
+	Discount          float64 `json:"discount,omitempty" bson:"discount,omitempty"`
+	SalesTax          float64 `json:"sales_tax,omitempty" bson:"sales_tax,omitempty"`
 }
 
 type Shipping struct {
