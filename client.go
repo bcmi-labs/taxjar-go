@@ -22,8 +22,11 @@ type Client struct {
 	Orders     OrderService
 }
 
-func NewClient(token string) *Client {
+func NewClient(token string, baseUri *string) *Client {
 	c := &Client{Client: &http.Client{}, token: token, baseUri: "https://api.taxjar.com/v2", Debug: false}
+	if baseUri != nil {
+		c.baseUri = *baseUri
+	}
 	c.Setup()
 	return c
 }
